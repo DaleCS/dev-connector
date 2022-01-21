@@ -1,0 +1,10 @@
+version: "3.8"
+services:
+  dev-connector-service:
+    build: ./dev-connector-service
+    ports:
+      - "8080:8080"
+    depends_on:
+      - mongodb
+  mongodb:
+    image: mongo
