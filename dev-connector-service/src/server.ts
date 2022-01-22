@@ -1,7 +1,10 @@
 import express, { Express } from "express";
 import cors from "cors";
 
+import { connectDB } from "./db";
 import { applyRoutes } from "./routes";
+
+connectDB();
 
 const app: Express = express();
 
