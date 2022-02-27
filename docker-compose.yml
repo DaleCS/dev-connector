@@ -8,6 +8,10 @@ services:
       - mongo
     profiles:
       - services
+    volumes:
+      - ./dev-connector-service:/app
+    command: npm run dev
+
   mongo:
     image: mongo:5.0.5
     restart: always
@@ -16,3 +20,8 @@ services:
       MONGO_INITDB_ROOT_PASSWORD: ${MONGO_INITDB_ROOT_PASSWORD}
     ports:
       - 27017:27017
+    volumes:
+      - mongodbdata:/data/db
+
+volumes:
+  mongodbdata:
