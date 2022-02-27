@@ -1,8 +1,8 @@
 import { Express } from "express";
 
-import { authRoutes } from "./auth.routes";
-import { userRoutes } from "./users.routes";
-import { profilesRoutes } from "./profiles.routes";
+import { authRoutes } from "./auth.route";
+import { userRoutes } from "./users.route";
+import { profilesRoutes } from "./profiles.route";
 
 export function applyRoutes(app: Express): void {
   app.use("/api/v1/users", userRoutes);
