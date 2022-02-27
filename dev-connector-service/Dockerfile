@@ -5,7 +5,6 @@ COPY . .
 
 RUN ["npm", "install"]
 RUN ["npm", "run", "build"]
-RUN ["rm", "-r", "./src"]
-CMD ["npm", "run", "dev"]
+CMD ["npm", "run", "dev:docker"]
 
 EXPOSE 8080:8080
