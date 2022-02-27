@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "docker-compose --profile services up",
+    "start": "docker-compose up",
     "start:db": "docker-compose up",
     "build:docker": "docker-compose build"
   },
